@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import { Skills } from "./components/Skills";
 import Contact from "./components/Contact";
+import Modal from "./components/Modal";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Home /> 
       <Projects />
       <Experience /> 
+      <Modal />
       <Skills /> 
       <About />
       <Contact />
