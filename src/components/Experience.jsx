@@ -44,7 +44,7 @@ const Experience = () => {
     <div name='experience' className='h-screen items-center bg-gray-800 md:h-screen sm:h-screen text-white'>
       <div className='grid grid-cols-1 lg:grid-cols-2 '>
         <div className='p-10 h-screen lg:rounded-r-3xl md:w-fit lg:w-fit'>
-          <div className='pb-8 h-full bg-green-500 rounded-3xl shadow-sm shadow-gray-500 items-center p-10'>
+          <div className='pb-8 h-full bg-lime-500 rounded-3xl shadow-sm shadow-gray-500 items-center p-10'>
             <p className='text-4xl font-bold font-signature inline border-b-4'>Experience </p>  
             {
               exp.map((exp) => (
@@ -71,8 +71,8 @@ const Experience = () => {
           <div className='py-28 px-10 items-center hidden md:block'>
             {
               selectitems &&(
-              <div className='justify-center items-center bg-gray-300 text-black p-10 h-full'>
-              <h1 className='text-center text-2xl font-bold inline border-b-4 border-black'>{selectitems.title}</h1>
+              <div className='justify-center items-center text-white p-10 h-full'>
+              <h1 className='text-center text-2xl font-bold inline border-b-4 border-white'>{selectitems.title}</h1>
               <ul>
                 <li className='py-6'>{selectitems.detail1}</li>
                 <li className='py-6'>{selectitems.detail2}</li>

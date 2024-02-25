@@ -49,7 +49,7 @@ export const Skills = () => {
     ];
 
   return (
-    <div name='skills' className='w-full text-white bg-gradient-to-b from-blue-800 to-white lg:bg-gradient-to-r  from-blue-800 to-white md:h-screen sm:h-screen'>
+    <div name='skills' className='w-full text-white bg-gray-800 md:h-screen sm:h-screen'>
         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
             <div className='pb-8'>
                 <p className='font-signature text-4xl font-bold inline border-b-4'>Skills</p>

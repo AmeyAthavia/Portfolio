@@ -1,64 +1,106 @@
+import { useState } from "react";
 import React from 'react'
+import Modal2 from "./Modal2";
 
 const Projects = () => {
   
   const project = [
       {
         id: 1,
-        n: 'Project1'
+        n: 'Object Detection, Tracking in Video Surveillance',
+        detail:`Led the development for this project and was responsible for applying the
+        machine learning algorithm and using Python, TensorFlow, SciPy, OpenCV,
+        OOP to concepts of inheritance and polymorphism.`,
+        techstack: 'Python, Tensorflow, Pandas, Jupyter',
       },
       {
         id: 2,
-        n:' Project2'
+        n:' WebApp to post and read Blogs',
+        detail:`Introduction and usage to Node JS, Express apps, use of MongoDB to store and
+        retrieve data.`,
+        techstack: 'JavaScript, NodeJS, Express Apps, HTML, CSS, MongoDB'
       },
       {
         id: 3,
-        n:' Project3'
+        n:' Portfolio',
+        detail:'Using ReactJS and Tailwind CSS to develop a reactive Portfolio website.',
+        techstack: 'JavaScript, ReactJS, Tailwind CSS, HTML',
       },
       {
         id: 4,
-        n: 'Project4'
+        n: 'Modified Morris Nine Mens using game trees',
+        detail: `Developed a modified version of Nine men’s Morris game using game trees,
+        minimax algorithm as well as AB search trees and employed the use of
+        object-oriented programming in python.`,
+        techstack: 'Python, Git',
       },
       {
         id: 5,
-        n: 'Project5'
+        n: 'Booking and management system',
+        detail:`Transformed a robust management system capable of efficiently storing, retrieving, and seamlessly displaying historical bookings while empowering users with cutting-edge functionality to secure train or flight reservations.`,
+        techstack: 'Java, SQL',
       },
       {
         id: 6,
-        n: 'Project6'
+        n: 'Semantic Relation Classification',
+        detail:`Developed and executed a model using NLP, aimed at mastering sentence comprehension, particularly those embedded with intricate relationship tags.
+        Utilized a Bi-LSTM model to develop a robust framework for predicting semantic relations within diverse sentence contexts and classify them based on the identified classes.`,
+        techstack: 'Python, NLTK, Git',
       }
   ];
 
+  const [modal, setModal] = useState(false);
+  const [selectitems, setSelectedItems] = useState(null);
+
+  const handleItemsClick = (title,detail, techstack) => {
+    setSelectedItems({title, detail, techstack})
+  };
+
+  const toggelModal = () => {
+    setModal(!modal)
+  }
+
+  const close = () => {
+    setModal(false);
+    setSelectedItems(null);
+}
+
   return (
 
-    <div name='projects' className='w-full text-white bg-gradient-to-b from-blue-800 to-gray-200 lg:bg-gradient-to-r from-blue-800 to-white md:h-screen sm:h-screen'>
-      
-      <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-        <div className='pb-8'>
-          <p className='text-4xl font-bold font-signature inline border-b-4'>Projects</p>
-          <p className='py-6'>Projects I have worked on</p>
+    <div name='projects' className='h-screen items-center bg-gray-800 md:h-screen sm:h-screen text-white'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 '>
+        <div className='p-14 h-screen lg:rounded-r-3xl md:w-fit lg:w-fit'>
+          <div className='pb-8 h-full bg-amber-500 rounded-3xl shadow-sm shadow-gray-500 items-center p-10'>
+            <p className='text-4xl font-bold font-signature inline border-b-4'>Projects </p>  
+            {
+              project.map((project) => (
+                <ul>
+                  <li key={project.id} onClick={() => handleItemsClick(project.n, project.detail, project.techstack)} className='text-xl text-wrap text-white pt-7 p-2 hover:scale-105 duration-200 hover:text-black cursor-pointer'>
+                    {project.n}
+                  </li>
+                </ul>
+              ))
+            }
+          </div>
         </div>
-
-        <div key='id' className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-8 sm:px-0'>
-        {
-          project.map(({id, n}) => (
+          <div className='md:hidden'>
+            {
+              selectitems && (
+                <Modal2 onClose={close} visible={toggelModal} data={selectitems}/>
+              )}
             
-              <div className='shadow-md text-center shadow-gray-500 rounded-lg bg-gray-600 justify-center'>
-                <div className='rounded-lg bg-cyan-300 text-center text-gray-700 font-bold hover:scale-105 duration-200'>
-                  <p className='text-3xl p-2'>
-                    {n}
-                  </p>
-                </div>
-                <div className='flex items-center justify-center'>
-                  <button className='w-1/2 px-6 py-2 m-2 duration-200 hover:scale-105'>Demo</button>
-                  <button className='w-1/2 px-6 py-2 m-2 duration-200 hover:scale-105'>Code</button>
-                </div>
-              </div>
-           
-          ))
-        }
-       </div>
-        
+          </div>
+          <div className='py-28 px-10 items-center hidden md:block'>
+            {
+              selectitems &&(
+              <div className='justify-center items-center text-white border-yellow-500 p-10 h-full'>
+              <h1 className='text-center text-2xl font-bold inline border-b-4 border-white'>{selectitems.title}</h1>
+              <ul>
+                <li className='py-6'>{selectitems.detail}</li>
+              </ul>
+              <p><h2 className='font-bold'>{`Tech Stack: ${selectitems.techstack}`}</h2></p>
+            </div>)}
+          </div>
       </div>
       
     </div>
