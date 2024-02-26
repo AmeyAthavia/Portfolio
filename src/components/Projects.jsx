@@ -76,7 +76,7 @@ const Projects = () => {
             {
               project.map((project) => (
                 <ul>
-                  <li key={project.id} onClick={() => handleItemsClick(project.n, project.detail, project.techstack)} className='text-xl text-wrap text-white md:pb-10 pt-4 p-2 hover:scale-105 duration-200 hover:text-black cursor-pointer'>
+                  <li key={project.id} onClick={() => handleItemsClick(project.n, project.detail, project.techstack)} className='text-base text-wrap text-white md:pb-10 pt-5 p-1 hover:scale-105 duration-200 hover:text-black cursor-pointer'>
                     {project.n}
                   </li>
                 </ul>

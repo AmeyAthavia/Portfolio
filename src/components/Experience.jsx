@@ -50,7 +50,7 @@ const Experience = () => {
             {
               exp.map((exp) => (
                 <ul>
-                  <li key={exp.id} onClick={() => handleItemsClick(exp.n, exp.detail1, exp.detail2, exp.detail3)} className='text-xl text-wrap text-white pt-5 p-2 hover:scale-105 duration-200 hover:text-black cursor-pointer'>
+                  <li key={exp.id} onClick={() => handleItemsClick(exp.n, exp.detail1, exp.detail2, exp.detail3)} className='text-base text-wrap text-white pt-5 p-1 hover:scale-105 duration-200 hover:text-black cursor-pointer'>
                     {exp.n}
                     <ul>
                       <li className='px-5 py-5'>{exp.loc}</li>
