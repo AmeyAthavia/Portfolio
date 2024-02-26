@@ -29,7 +29,7 @@ const Home = () => {
                     <button className='group text-white w-fit px-6 py-3 my-2
                     flex p-15 items-center rounded-md bg-gradient-to-r from-red-700 to-orange-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer'>
                         
-                        <a href="./Amey_Athavia_new.pdf" className='flex w-fit my-2 max-w-2xl' download={true}>
+                        <a href="./Amey_CV.pdf" className='flex w-fit my-2 max-w-2xl' download={true}>
                         Resume <BsFillPersonLinesFill size={30} className='ml-2'/>
                         </a>                        
                     </button>
