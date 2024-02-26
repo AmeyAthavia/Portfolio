@@ -12,7 +12,7 @@ const Socials = () => {
                 LinkedIn<FaLinkedin size={30}/>
                 </>
                 ),
-                href: 'https://linkedin.com',
+                href: 'https://linkedin.com/in/amey-athavia/',
         },
         {
             id: 2,
@@ -21,7 +21,7 @@ const Socials = () => {
                 GitHub<FaGithub size={30}/>
                 </>
                 ),
-                href: 'https://github.com',
+                href: 'https://github.com/AmeyAthavia',
         },
         {
             id: 3,

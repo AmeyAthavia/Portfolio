@@ -11,31 +11,31 @@ const NavBar = () => {
             id: 1,
             link: 'home'
         },
+        // {
+        //     id: 2,
+        //     link: 'about'
+        // },
         {
             id: 2,
-            link: 'about'
-        },
-        {
-            id: 3,
             link: 'projects'
         },
         {
-            id: 4,
+            id: 3,
             link: 'experience'
         },
         {
-            id: 5,
+            id: 4,
             link: 'skills'
         },
         {
-            id: 6,
+            id: 5,
             link: 'contact me'
         },
     ]
 
   return (
     <div className='flex justify-between items-center w-full
-    h-20 px-4 text-red-600  fixed'>
+    h-20 px-4 text-white  fixed'>
         <div>
 
         </div>
@@ -43,7 +43,7 @@ const NavBar = () => {
             
             {links.map(({id,link}) => (
                 <li key={id} className='px-4 items-end cursor-pointer capitalize 
-                text-red-600 font-bold text-lg hover:scale-125 duration-200'>
+                text-white font-bold text-lg hover:scale-125 duration-200'>
                     <Link to={link} smooth duration={500}> 
                     {link}
                     </Link>

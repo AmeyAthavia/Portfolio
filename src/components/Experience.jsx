@@ -43,13 +43,14 @@ const Experience = () => {
   return (
     <div name='experience' className='h-screen items-center bg-gray-800 md:h-screen sm:h-screen text-white'>
       <div className='grid grid-cols-1 lg:grid-cols-2 '>
-        <div className='p-10 h-screen lg:rounded-r-3xl md:w-fit lg:w-fit'>
+        <div className='p-12 h-screen lg:rounded-r-3xl md:w-fit lg:w-fit'>
           <div className='pb-8 h-full bg-lime-500 rounded-3xl shadow-sm shadow-gray-500 items-center p-10'>
-            <p className='text-4xl font-bold font-signature inline border-b-4'>Experience </p>  
+            <p className='text-4xl font-bold font-signature inline border-b-4'>Experience </p> 
+            <p className='pt-5 font-bold'>Click for more details</p> 
             {
               exp.map((exp) => (
                 <ul>
-                  <li key={exp.id} onClick={() => handleItemsClick(exp.n, exp.detail1, exp.detail2, exp.detail3)} className='text-xl text-wrap text-white pt-10 p-2 hover:scale-105 duration-200 hover:text-black'>
+                  <li key={exp.id} onClick={() => handleItemsClick(exp.n, exp.detail1, exp.detail2, exp.detail3)} className='text-xl text-wrap text-white pt-5 p-2 hover:scale-105 duration-200 hover:text-black cursor-pointer'>
                     {exp.n}
                     <ul>
                       <li className='px-5 py-5'>{exp.loc}</li>
@@ -71,12 +72,12 @@ const Experience = () => {
           <div className='py-28 px-10 items-center hidden md:block'>
             {
               selectitems &&(
-              <div className='justify-center items-center text-white p-10 h-full'>
+              <div className='justify-center items-center border-4 border-lime-500 text-white p-10 h-fit'>
               <h1 className='text-center text-2xl font-bold inline border-b-4 border-white'>{selectitems.title}</h1>
               <ul>
-                <li className='py-6'>{selectitems.detail1}</li>
-                <li className='py-6'>{selectitems.detail2}</li>
-                <li className='py-6'>{selectitems.detail3}</li>
+                <li className='pt-10 py-4'>{selectitems.detail1}</li>
+                <li className='py-4'>{selectitems.detail2}</li>
+                <li className='py-4'>{selectitems.detail3}</li>
               </ul>
               <p><h2 className='font-bold'>Tech Stack:</h2></p>
             </div>)}

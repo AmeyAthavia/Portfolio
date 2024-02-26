@@ -10,16 +10,17 @@ const Home = () => {
         <div className='max-w-screen-lg mx-auto flex flex-col items-center
         justify-center h-full px-4 md:flex-row'>
             <div className='flex flex-col justify-center h-full'>
-                <h2 className='text-4xl sm:text-7xl font-bold font-signature text-white'>
+                <h2 className='text-5xl sm:text-7xl font-bold font-signature text-white'>
                     Amey Athavia</h2>
                 <p className='text-gray-400 py-4 max-w-md'>
-                    software engineer, masters in computer science from University of texas at Dallas
+                    Software Engineer, actively looking for a Full-time opportunity.
+
                 </p>
                 <div className='flex flex-row space-x-5'>
                     <Link to='projects' smooth duration={500}
                     className='group text-white w-fit px-4 py-3 my-2
-                    flex items-center rounded-md  bg-amber-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer'>
-                        Portfolio 
+                    flex items-center rounded-md bg-gradient-to-r from-red-700 to-orange-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer'>
+                        Projects 
                         <span className='group-hover:rotate-90 duration-200'>
                             <MdKeyboardDoubleArrowRight size={30} className='ml-1'/>
                         </span>

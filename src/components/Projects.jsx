@@ -69,13 +69,14 @@ const Projects = () => {
 
     <div name='projects' className='h-screen items-center bg-gray-800 md:h-screen sm:h-screen text-white'>
       <div className='grid grid-cols-1 lg:grid-cols-2 '>
-        <div className='p-14 h-screen lg:rounded-r-3xl md:w-fit lg:w-fit'>
+        <div className='p-12 h-screen lg:rounded-r-3xl md:w-fit lg:w-fit'>
           <div className='pb-8 h-full bg-amber-500 rounded-3xl shadow-sm shadow-gray-500 items-center p-10'>
             <p className='text-4xl font-bold font-signature inline border-b-4'>Projects </p>  
+            <p className='pt-5 font-bold'>Click for more details</p>
             {
               project.map((project) => (
                 <ul>
-                  <li key={project.id} onClick={() => handleItemsClick(project.n, project.detail, project.techstack)} className='text-xl text-wrap text-white pt-7 p-2 hover:scale-105 duration-200 hover:text-black cursor-pointer'>
+                  <li key={project.id} onClick={() => handleItemsClick(project.n, project.detail, project.techstack)} className='text-xl text-wrap text-white md:pb-10 pt-4 p-2 hover:scale-105 duration-200 hover:text-black cursor-pointer'>
                     {project.n}
                   </li>
                 </ul>
@@ -93,7 +94,7 @@ const Projects = () => {
           <div className='py-28 px-10 items-center hidden md:block'>
             {
               selectitems &&(
-              <div className='justify-center items-center text-white border-yellow-500 p-10 h-full'>
+              <div className='justify-center items-center border-4 border-amber-500 text-white p-10 h-fit'>
               <h1 className='text-center text-2xl font-bold inline border-b-4 border-white'>{selectitems.title}</h1>
               <ul>
                 <li className='py-6'>{selectitems.detail}</li>

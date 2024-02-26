@@ -1,50 +1,92 @@
 import React from 'react'
+import python from '../assets/python.png';
+import node from '../assets/node.png';
+import django from '../assets/django.png';
+import sql from '../assets/sql.png';
 import css from '../assets/css.png';
 import html from '../assets/html.png';
 import github from '../assets/github.png';
 import tailwind from '../assets/tailwind.png';
 import reactImage from '../assets/react.png';
 import javascript from '../assets/javascript.png';
+import tensorflow from '../assets/tensorflow.png';
+import aws from '../assets/aws.png';
 
 
 export const Skills = () => {
 
     const skill = [
         {
-          id: 1,
+            id: 1,
+            src: python,
+            title: 'Python',
+            style: 'shadow-blue-500'
+        },
+        {
+            id: 2,
+            src: django,
+            title: 'Django',
+            style: 'shadow-green-500'
+        },
+        {
+            id: 3,
+            src: sql,
+            title: 'MySQL',
+            style: 'shadow-blue-500'
+        },
+        {
+            id: 4,
+            src: node,
+            title: 'NodeJS',
+            style: 'shadow-green-500'
+        },
+        {
+          id: 5,
           src: html,
           title: 'HTML',
           style: 'shadow-orange-500'
         },
         {
-            id: 2,
+            id: 6,
             src: css,
             title: 'CSS',
             style: 'shadow-blue-500'
         },
         {
-            id: 3,
+            id: 7,
             src: javascript,
             title: 'JavaScript',
             style: 'shadow-yellow-500'
         },
         {
-            id: 4,
+            id: 8,
             src: github,
             title: 'Github',
             style: 'shadow-gray-400'
         },
         {
-            id: 5,
+            id: 9,
             src: reactImage,
             title: 'React',
             style: 'shadow-blue-600'
         },
         {
-            id: 6,
+            id: 10,
             src: tailwind,
             title: 'HTML',
             style: 'shadow-sky-400'
+        },
+        {
+            id: 11,
+            src: tensorflow,
+            title: 'Tensorflow',
+            style: 'shadow-orange-400'
+        },
+        {
+            id: 12,
+            src: aws,
+            title: 'AWS',
+            style: 'shadow-orange-400'
         }
     ];
 

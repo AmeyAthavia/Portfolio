@@ -17,7 +17,7 @@ const Modal2 = ({visible, data, onClose}) => {
             <p className='text-4xl lg:px-16 font-bold '>{data.title}</p>            
             <ul>
               <li className='py-6'>{data.detail}</li>
-              <li>{`Tech Stack: ${data.techstack}`}</li>
+              <li><h2 className='font-bold'>{`Tech Stack: ${data.techstack}`}</h2></li>
             </ul> 
             <div className='flex items-center justify-center'>
               <button className='text-xl px-6 py-2 m-2 duration-200 hover:scale-105' onClick={onClose}>&times;</button>
